@@ -20,7 +20,9 @@ for (const subFolder of dirCommands) {
   const filesCommands = fs.readdirSync(path.join(__dirname, 'commands', subFolder));
   
   for (const fileCommand of filesCommands) {
-    
+    const command = require(path.join(__dirname, 'commands', subFolder, fileCommand));
+    console.log(`${command.name} cargado de manera uniforme`);
+    client.commands.set(command.name, command);
   }
 }
 
