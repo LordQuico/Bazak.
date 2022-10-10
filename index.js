@@ -32,7 +32,7 @@ if (int.isCommand() && int.commandName === 'ping') {
   if (int.isCommand() && int.commandName === 'pingea') {
     const usuario = int.options.getUser('usuario');
 
-    int.reply(`${usuario.username} Ups se me chispoteo`);
+    int.reply(`${usuario} Ups se me chispoteo`);
   }
 });
   
